@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Not a Test.</title>
+    <!-- <link rel="stylesheet" href="homepage.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/jko3rau.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<style>
+
+body {
+font-family: montserrat, sans-serif;
+margin:0px;
+font-size:14px;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+}
+
+#homepage{
+  width:100%;
+  height:100vh;
+}
+
+#title{
+  width:100%;
+  text-align:center;
+  margin-top:-45%;
+  z-index:1;
+}
+
+h1{
+  font-size:100px;
+  font-weight: 700;
+  color:#E85147;
+}
+
+#pageSelection{
+  position:relative;
+  padding-top:20px;
+  width:100%;
+  text-align:center;
+  height:160px;
+}
+
+#links{
+  color:#808080;
+  width:100%;
+}
+
+#link1{
+  display:inline-block;
+  width:20%;
+  padding-left:18%;
+}
+
+#link1:hover .circle{
+  border:2px solid #463b5b;
+}
+
+#link1:hover .icon{
+  color:#463b5b;
+}
+
+#link1:hover .selectionText{
+  color:#463b5b;
+}
+
+#link2{
+  display:inline-block;
+  width:20%;
+}
+
+#link2:hover .circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #463b5b;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+}
+
+#link2:hover .icon{
+  color:#463b5b;
+}
+
+#link2:hover .selectionText{
+  color:#463b5b;
+}
+
+#link3{
+  float:right;
+  width:20%;
+  padding-right:20%;
+}
+
+#link3:hover .circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #463b5b;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+}
+
+#link3:hover .icon{
+  color:#463b5b;
+}
+
+#link3:hover .selectionText{
+  color:#463b5b;
+}
+
+.circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #cacaca;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+  transition: border 0.3s ease-in-out;
+}
+
+.icon{
+  font-size:23px;
+  padding-bottom:20px;
+  color:	#909090;
+  text-align:center;
+  padding-top:5px;
+  transition: color 0.3s ease-in-out;
+}
+
+#assessment{
+  font-size:22px;
+}
+
+.selectionText{
+  padding-top:20px;
+  font-family:Lato, sans-serif;
+  font-weight:400;
+  letter-spacing: 0.5px;
+  text-transform:uppercase;
+  color:	#909090;
+  font-size:15px;
+  text-decoration:none;
+  transition: color 0.3s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,0);
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    display: inline-block;
+    height: auto;
+    max-width: 750px;
+    min-height: 100px;
+    color:#707070;
+    line-height:25px;
+    vertical-align: middle;
+    text-align:left;
+    color:#707070;
+    line-height:25px;
+    width: 60%;
+    margin-top:13%;
+    border-radius: 8px;
+    padding: 30px 5%;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+}
+
+#popText{
+  padding-left:120px;
+  padding-right:100px;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border-radius: 50px;
+    font-family:Montserrat,sans-serif;
+    border:2px solid #cacaca;
+    font-weight:700;
+    color:#909090;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 44%;
+    left: 400px;
+    font-size: 25px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.popupCloseButton:hover {
+    color: #463b5b;
+    border: 2px solid #463b5b;
+}
+
+.trigger_popup_fricc {
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+
+</style>
+  </head>
+  <body>
+
+<div id="homepage">
+<img src="http://www.mediafire.com/convkey/cf56/ed5k1m80smtp6mizg.jpg" />
+<div id="title">
+    <h1>This is not a test.</h1>
+    <div id="pageSelection">
+      <div id="links">
+        <div id="link1">
+          <div class="circle" id="1">
+            <a href="">
+            <div class="icon" id="dimensions"><a class="trigger_popup_fricc"><i class="fas fa-question"></i></a></div>
+          </div>
+          <div class="selectionText popup" id="dimensionsText"><a href="#?w=auto" rel="box1" class="trigger_popup_fricc">About the project</a></a></div>
+          </div>
+        <div id="link2">
+          <div class="circle" id="1"><a href="https://christinahh.github.io/Dimensions/">
+            <div class="icon" id="dimensions"><i class="fas fa-list-ul"></i></div>
+          </div>
+          <div class="selectionText" id="dimensionsText">Explore dimensions</a></div>
+          </div>
+        <div id="link3">
+            <div class="circle" id="2"><a href="https://christinahh.github.io/Quiz/">
+          <div class="icon" id="assessment"><i class="fas fa-pencil-alt"></i></div>
+          </div>
+          <div class="selectionText" id="assessmentText">Take the Assessment</a></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+        <div class="hover_bkgr_fricc">
+          <span class="helper"></span>
+          <div>
+              <div class="popupCloseButton">X</div>
+              <div id="popText">
+                <p>Personality assessments and models have been made readily accessible to the public in the form of online questionnaires, garnering popularity due to their quick and clear results. My undergraduate thesis is an exploration of the feedback loop generated from the self-report style of these online tests. The website features two interactive components: an investigation of three widely popular online personality questionnaires, and a new assessment that repurposes the self-report format to promote reflection and critical thought.  Upon receiving an assessment result, visitors are encouraged to take a corresponding bookmark or sticker as a means of remembering it. An additional informative video summarizes the overall nature of online personality tests, including a commentary on how they rely upon self-input. </p></div>
+          </div>
+      </div>
+
+  </body>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(window).on('load', function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').fadeOut(300);
+    });
+});
+
+</script>
+
+
+</html>
